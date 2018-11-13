@@ -7,12 +7,27 @@ public class Sphere implements Surface {
     public static final double MIN_DISTANCE = 0.01;
     private final double radius;
     private double[] myColor = new double[]{0, 255.0,0};
+    private double REFLECTIVITY = 0.5;
+
+    public double getREFLECTIVITY() {
+        return REFLECTIVITY;
+    }
+    public void setREFLECTIVITY(double REFLECTIVITY){
+        this.REFLECTIVITY = REFLECTIVITY;
+    }
 
     public Sphere(double x, double y, double z, double r){
         center[0] =  x;
         center[1]  = y;
         center[2]  = z;
         radius = r;
+    }
+    public Sphere(double x, double y, double z, double r, Color c){
+        center[0] =  x;
+        center[1]  = y;
+        center[2]  = z;
+        radius = r;
+        myColor =  new double[]{c.getRed(),c.getGreen(), c.getBlue()};
     }
     @Override
     public double[] getColor(){
@@ -47,19 +62,14 @@ public class Sphere implements Surface {
         }
         return null;
     }
-    public double[] getIllumination(double[] surface, double[]direction, int depth){
-        double[] to_surface = VectorMath.normalize(VectorMath.subtract(surface,center));
-        double[] to_light = VectorMath.normalize(VectorMath.subtract(Render.LIGHT_SOURCE,surface));
-        double intensity = Render.AMBIENT_LIGHT + (1-Render.AMBIENT_LIGHT) * Math.max(0,VectorMath.dot(to_light,to_surface));
-        double[] direct = VectorMath.scale(myColor,intensity);
-        if(depth==1){
-            return direct;
+
+ public double[] getNormalVector(double[] surface, double[] direction){
+        double[] out = VectorMath.subtract(surface,center);
+        if(VectorMath.dot(out, direction)<0){
+            return out;
         }else{
-            double cos = VectorMath.dot(direction, to_surface);
-            double[] bounce = VectorMath.subtract(direction, VectorMath.scale(to_surface, 2*cos));
-            double[] reflected = Render.trace_ray(surface, bounce, depth -1 );
-            return VectorMath.mix(direct, reflected, 0.5 + 0.5 * (Math.pow(intensity, 30)));
+            return VectorMath.scale(out,-1);
         }
-    }
+ }
 }
 

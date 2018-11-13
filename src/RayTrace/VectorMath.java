@@ -3,6 +3,15 @@ package RayTrace;
 import java.awt.*;
 
 public class VectorMath {
+    public static final double[] ELEM_I = new double[]{1,0,0};
+    public static final double[] ELEM_J = new double[]{0,1,0};
+    public static final double[] ELEM_K = new double[]{0,0,1};
+    /**
+     * Returns a noise vector, to provide "diffused" reflections;
+     */
+    public static double[] getNoiseVector(double NOISE){
+        return new double[]{Math.random()*NOISE -NOISE/2, Math.random()*NOISE-NOISE/2,Math.random()*NOISE-NOISE/2};
+    }
     /**
      * Return a "vectorized" weighted average between a and b giving a ratio weight, and b 1 - ratio
      *

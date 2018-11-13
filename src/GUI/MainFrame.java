@@ -9,6 +9,7 @@ public class MainFrame extends JFrame {
         this.add(new MainPanel());
         this.pack();
         this.setVisible(true);
+        this.setResizable(false);
         this.setAlwaysOnTop(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

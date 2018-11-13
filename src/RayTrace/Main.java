@@ -1,10 +1,11 @@
 package RayTrace;
 
 import GUI.MainFrame;
+import GUI.MainPanel;
 
-import javax.swing.*;
+import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
+import java.io.File;
 
 public class Main {
     public static final int SIZE = MainFrame.SIZE;
@@ -12,6 +13,7 @@ public class Main {
 
     /**
      * Entry point
+     *
      * @param args unused CLA
      */
 
@@ -22,8 +24,24 @@ public class Main {
                 colors[x][y] = render.renderColor(x, y);
             }
         }
+
+
         GUI.MainFrame main = new MainFrame();
-        for (;;)
-            main.repaint();
+        main.repaint();
+
+        new Thread(
+                new Runnable() {
+                    public void run() {
+                        System.out.println("test!");
+                        try {
+                            ImageIO.write(MainPanel.canvas,"png",new File((new java.util.Scanner(System.in)).nextLine()));
+                        } catch (Exception ex) {
+                            System.err.println("Oops!");
+                            ex.printStackTrace();
+                        }
+                    }
+                }
+        ).start();
+
     }
 }
