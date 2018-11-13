@@ -14,7 +14,7 @@ public class Main {
             }
         }
     }
-    public static void render_color(int x, int y){
+    public static Color render_color(int x, int y){
 
         //TODO: make this work
 
