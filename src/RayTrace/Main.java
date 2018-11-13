@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         for(int x = 0; x<SIZE; x++){
             for(int y = 0; y<SIZE;y++){
-                colors = render_color(x,y);
+                colors[x][y] = render_color(x,y);
             }
         }
     }
