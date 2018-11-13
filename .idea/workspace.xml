@@ -3,23 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="48d0ac40-cc5e-4246-b525-223e7958c5b3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../Exceptional/Exceptional.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/MainPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RayTrace/Camera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RayTrace/VectorMath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEndHack" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEndHack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CalHacks" beforeDir="false" afterPath="$PROJECT_DIR$/../CalHacks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSONNaturalDisasters" beforeDir="false" afterPath="$PROJECT_DIR$/../JSONNaturalDisasters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MobileHack" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileHack" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Main$MainFrame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Main$MainPanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RayTrace/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RayTrace/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Render.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,13 +31,13 @@
         <counts>
           <entry key="dummy" value="8" />
           <entry key="java" value="7119" />
-          <entry key="md" value="152" />
+          <entry key="md" value="177" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="7119" />
-          <entry key="Markdown" value="152" />
+          <entry key="Markdown" value="177" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -122,8 +110,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="138" selection-start-line="2" selection-start-column="138" selection-end-line="2" selection-end-column="138" />
+              <first_editor relative-caret-position="60">
+                <caret line="4" column="89" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
               </first_editor>
               <second_editor />
             </state>
@@ -220,8 +208,8 @@
         <option value="$PROJECT_DIR$/src/RayTrace/Camera.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Sphere.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Render.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/RayTrace/VectorMath.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -278,7 +266,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542084487448" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542084634281" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -320,12 +308,12 @@
       <option name="presentableId" value="Default" />
       <updated>1542067373909</updated>
       <workItem from="1542067380574" duration="630000" />
-      <workItem from="1542071080063" duration="10429000" />
+      <workItem from="1542071080063" duration="10677000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11059000" />
+    <option name="totallyTimeSpent" value="11307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="812" extended-state="0" />
@@ -341,13 +329,13 @@
       <window_info anchor="bottom" id="Messages" weight="0.32916668" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49928468" weight="0.32916668" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49928468" weight="0.32916668" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4985694" weight="0.32916668" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32916668" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49928468" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007153" side_tool="true" visible="true" weight="0.32916668" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -391,9 +379,6 @@
           <caret line="4" column="63" lean-forward="true" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RayTrace.iml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RayTrace/Sphere.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -456,11 +441,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/RayTrace.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="138" selection-start-line="2" selection-start-column="138" selection-end-line="2" selection-end-column="138" />
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="89" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
           </first_editor>
           <second_editor />
         </state>
