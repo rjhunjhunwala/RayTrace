@@ -1,0 +1,16 @@
+package GUI;
+import javax.swing.*;
+
+
+public class MainFrame extends JFrame {
+    public static final int SIZE = 480;
+    public MainFrame() {
+        super("Here is your rendering!");
+        this.add(new MainPanel());
+        this.pack();
+        this.setVisible(true);
+        this.setAlwaysOnTop(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+    }
+}
