@@ -13,6 +13,49 @@ public class VectorMath {
         return new double[]{Math.random()*NOISE -NOISE/2, Math.random()*NOISE-NOISE/2,Math.random()*NOISE-NOISE/2};
     }
     /**
+     * Matrix Product (3x3) by vector...
+     */
+    public static double[] matrixProduct(double[][] A, double[] b){
+        return new double[]{
+                dot(new double[]{A[0][0],A[1][0],A[2][0]},b),
+                dot(new double[]{A[0][1],A[1][1],A[2][1]},b),
+                dot(new double[]{A[0][2],A[1][2],A[2][2]},b)
+        };
+    }
+    /**
+     * Invert a 3x3 matrix
+     */
+    public static double[][] invert3(double[][] A){
+        double det = det3(A);
+        A = transpose(A);
+        A = checkerboardSigns(A);
+        A = minors(A);
+        A = new double[][]{scale(A[0],1/det), scale(A[1], 1/det),scale(A[2], 1/det)};
+        return A;
+
+    }
+    public static double[][] transpose(double[][] in){
+        double[][] out = new double[in[0].length][in.length]
+        for(int i = 0;i<in.length;i++){
+            for(int j = 0;j<in[0].length){
+                out[j][i] = in[i][j];
+            }
+        }
+        return out;
+    }
+    public static double det3(double[][] A){
+        return A[0][0] * (A[1][1] * A[2][2]- A[2][1]*A[1][2]) - A[1][0] * (A[1][1] * A[2][2]- A[2][1]*A[1][2])
+    }
+    public static double det2(){
+        return 0.0;
+    }
+    public static double[][] minors(double[][] A){
+        return A;
+    }
+    public static double[][] checkerboardSigns(double[][] A){
+        return A;
+    }
+    /**
      * Return a "vectorized" weighted average between a and b giving a ratio weight, and b 1 - ratio
      *
      * @param a

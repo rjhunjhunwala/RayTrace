@@ -6,20 +6,22 @@ public class Pane implements Surface {
     /**
      * Long story short, this is the best way to handle division by zero...
      */
-    public static final double FAKE_INFINITY = 1000000000.0;
     public static final double MIN_DISTANCE = 0.01;
     private final double radius = 3;
+    public double X_LENGTH, Y_LENGTH;
     private double[] normal;
     private double[] X_AXIS, Y_AXIS, upper_left;
     private double[] center = new double[3];
     private double[] myColor = new double[]{0, 255.0, 0};
     private double REFLECTIVITY = 0.5;
 
-    public Pane(double[] normal, double[] X_AXIS, double[] Y_AXIS, double[] upper_left) {
+    public Pane(double[] normal, double[] X_AXIS, double[] Y_AXIS, double[] upper_left, double X_LENGTH, double Y_LENGTH) {
         this.normal = normal;
         this.X_AXIS = X_AXIS;
         this.Y_AXIS = Y_AXIS;
         this.upper_left = upper_left;
+        this.X_LENGTH = X_LENGTH;
+        this.Y_LENGTH = Y_LENGTH;
     }
 
     public double getREFLECTIVITY() {
@@ -30,9 +32,13 @@ public class Pane implements Surface {
         this.REFLECTIVITY = REFLECTIVITY;
     }
 
-    public double[] getNormalVector(double[] a, double[] b) {
+    public double[] getNormalVector(double[] surface, double[] direction) {
 
-        return normal;
+        if (VectorMath.dot(normal, direction) < 0) {
+            return normal;
+        } else {
+            return VectorMath.scale(normal, -1);
+        }
     }
 
     @Override
@@ -50,6 +56,34 @@ public class Pane implements Surface {
 
     @Override
     public Double getIntersection(double[] source, double[] direction) {
+        //We solve a 3x3 system of equations...
+        double[][] A = new double[3][3];
+        double[] b = new double[3];
+        A[0][2] = normal[0];
+        A[1][2] = normal[1];
+        A[2][2] = normal[2];
+
+        b[2] = VectorMath.dot(normal, upper_left);
+
+
+        A[0][0] = direction[1];
+        A[1][0] = -direction[0];
+        b[0] = direction[1] * source[0] - direction[0] * source[1];
+
+        A[1][1] = direction[2];
+        A[2][1] = -direction[1];
+        b[1] = direction[2] * source[1] - direction[1] * source[2];
+
+        double[] intersection = VectorMath.matrixProduct(VectorMath.invert(A), b);
+
+        double[] disp = VectorMath.subtract(intersection, upper_left);
+
+        double dotProd1 = VectorMath.dot(disp, X_AXIS);
+        double dotProd2 = VectorMath.dot(disp, Y_AXIS);
+        if (dotProd1 > 0 && dotProd2 > 0 && dotProd1 < X_LENGTH && dotProd2 < Y_LENGTH) {
+            return VectorMath.norm(VectorMath.subtract(intersection, source));
+        }
+
         return null;
     }
 
