@@ -67,4 +67,13 @@ public final class Scene {
         next.setColor(Color.white);
         SURFACES.add(next);
     }
+    public static void getPlaneTest(ArrayList<Surface> SURFACES){
+    SURFACES.add(new Pane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,10},10,10));
+        SURFACES.add(new Pane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{-5,-5,0},10,10));
+        SURFACES.add(new Pane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{5,-5,0},10,10));
+        SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,-5,0},10,10));
+        SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,5,0},10,10));
+        ( (Pane) (SURFACES.get(1))).setColor(Color.green);
+        ( (Pane) (SURFACES.get(2))).setColor(Color.red);
+    }
 }

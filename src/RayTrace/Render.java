@@ -2,27 +2,46 @@ package RayTrace;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Render{
-    public static final double MAGIC_SATURATION_THRESHOLD = .95;
+    public static final double MAGIC_SATURATION_THRESHOLD = .90;
     public static final int MAX_BOUNCES = 15;
     public static final double[] VOID_COLOR = new double[]{0,0,0};
     public static final double[] SKY_COLOR = new double[]{0,150,255};
     public static final ArrayList<Surface> SURFACES = new ArrayList<>();
+    public static final int SCENE = 0;
+
     static{
-        Scene.getTestA(SURFACES);
-        //Scene.getSpheresInReflectiveSphere(SURFACES);
+        switch(SCENE){
+            case 0:
+                Scene.getSpheresInReflectiveSphere(SURFACES);
+
+            case 1:
+                Scene.getTestA(SURFACES);
+                break;
+            case 2:
+                Scene.getPlaneTest(SURFACES);
+                break;
+            default:
+                System.err.println("No Scene found!");
+        }
     }
     public static double FOV = 1.0;
-    public static final double AMBIENT_LIGHT = .6;
+    public static final double AMBIENT_LIGHT = .2;
     public static double[] LIGHT_SOURCE = new double[]{0,0,0};
 
     public static Color renderColor(int x, int y) {
         double x1 = (double) x , y1 = (double) y;
         double[] direction = VectorMath.normalize(new double[]{x1/Main.SIZE-.5,.5 - y1/Main.SIZE , 1});
         double[] rendered = trace_ray(Camera.source_loc, direction, MAX_BOUNCES);
-        return new Color((int) (rendered[0]*MAGIC_SATURATION_THRESHOLD), (int) (rendered[1]*MAGIC_SATURATION_THRESHOLD), (int) (rendered[2] *MAGIC_SATURATION_THRESHOLD));
-    }
+try {
+    return new Color((int) (rendered[0] * MAGIC_SATURATION_THRESHOLD), (int) (rendered[1] * MAGIC_SATURATION_THRESHOLD), (int) (rendered[2] * MAGIC_SATURATION_THRESHOLD));
+}catch(Exception ex){
+    System.err.println(Arrays.toString(rendered));
+    return Color.white;
+}
+}
     public static double[] trace_ray(double[] source, double[] direction, int bounce){
         Surface best_surface = null;
         double best_dist = Integer.MAX_VALUE;
@@ -37,6 +56,7 @@ public class Render{
             return VOID_COLOR;
         }else{
             double[] surface = VectorMath.add(source, VectorMath.scale(direction, best_dist));
+
             return best_surface.getIllumination(surface,direction, bounce);
         }
     }

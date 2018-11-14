@@ -17,7 +17,7 @@ public interface Surface {
     default double[] getIllumination(double[] surface, double[]direction, int depth){
         double[] normal_vector = VectorMath.normalize(getNormalVector(surface, direction));
         double[] to_light = VectorMath.normalize(VectorMath.subtract(Render.LIGHT_SOURCE,surface));
-        double intensity = Render.AMBIENT_LIGHT + (1-Render.AMBIENT_LIGHT) * VectorMath.dot(to_light,normal_vector);
+        double intensity = Render.AMBIENT_LIGHT + (1-Render.AMBIENT_LIGHT) * Math.max(0,VectorMath.dot(to_light,normal_vector));
         double[] direct = VectorMath.scale(getColor(),intensity);
         if(depth==1){
             return direct;
@@ -26,7 +26,10 @@ public interface Surface {
             double[] bounce = VectorMath.normalize(VectorMath.add(VectorMath.subtract(direction,
                     VectorMath.scale(normal_vector, 2*cos)),VectorMath.getNoiseVector(getNOISE())));
             double[] reflected = Render.trace_ray(surface, bounce, depth -1 );
-            return VectorMath.mix(direct, reflected, (1-getREFLECTIVITY()));
-        }
+
+                return VectorMath.mix(direct, reflected, (1 - getREFLECTIVITY()) + getREFLECTIVITY() * Math.pow(intensity, 30));
+
+            }
+
     }
 }

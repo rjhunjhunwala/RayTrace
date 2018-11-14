@@ -6,6 +6,7 @@ import GUI.MainPanel;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.io.File;
+import java.util.Arrays;
 
 public class Main {
     public static final int SIZE = MainFrame.SIZE;
@@ -18,6 +19,9 @@ public class Main {
      */
 
     public static void main(String[] args) {
+
+
+
         Render render = new Render();
         for (int x = 0; x < SIZE; x++) {
             for (int y = 0; y < SIZE; y++) {

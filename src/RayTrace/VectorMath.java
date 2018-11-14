@@ -35,24 +35,59 @@ public class VectorMath {
 
     }
     public static double[][] transpose(double[][] in){
-        double[][] out = new double[in[0].length][in.length]
+        double[][] out = new double[in[0].length][in.length];
         for(int i = 0;i<in.length;i++){
-            for(int j = 0;j<in[0].length){
+            for(int j = 0;j<in[0].length;j++){
                 out[j][i] = in[i][j];
             }
         }
         return out;
     }
     public static double det3(double[][] A){
-        return A[0][0] * (A[1][1] * A[2][2]- A[2][1]*A[1][2]) - A[1][0] * (A[1][1] * A[2][2]- A[2][1]*A[1][2])
+        return A[0][0] * (A[1][1] * A[2][2]- A[2][1]*A[1][2]) - A[1][0] * (A[0][1] * A[2][2]- A[2][1]*A[0][2])
+                +  A[2][0] * (A[0][1] * A[1][2]- A[1][1]*A[0][2]);
     }
-    public static double det2(){
-        return 0.0;
+
+    /**
+     * det(|a c|
+     *     |b d|
+     * @param vectorized <a,b,c,d>
+     * @return
+     */
+    private static double det2(double[] vectorized){
+        return vectorized[0]*vectorized[3]-vectorized[1]*vectorized[2];
     }
     public static double[][] minors(double[][] A){
-        return A;
+        double[][] temp = new double[3][3];
+        for(int i = 0;i<3;i++){
+            for(int j = 0;j<3;j++){
+                double[] vectorized = new double[4];
+                int index = 0;
+                for(int i1 = 0;i1<3;i1++){
+                    for(int j1 = 0; j1<3;j1++){
+                        if(i1!=i && j1!=j){
+                            vectorized[index] = A[i1][j1];
+                            index +=1;
+                        }
+                    }
+                }
+                temp[i][j] = det2(vectorized);
+            }
+        }
+        return temp;
     }
+
+    /**
+     * in place checkerboards signs
+     * @param A
+     * @return
+     */
     public static double[][] checkerboardSigns(double[][] A){
+        for(int i = 0;i<A.length;i++){
+            for(int j = 0;j<A.length;j++){
+                A[i][j] *= 1 - (((i+j)&1)<<1); //branchless hack!
+            }
+        }
         return A;
     }
     /**

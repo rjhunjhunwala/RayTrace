@@ -6,13 +6,13 @@ public class Pane implements Surface {
     /**
      * Long story short, this is the best way to handle division by zero...
      */
-    public static final double MIN_DISTANCE = 0.01;
+
     private final double radius = 3;
     public double X_LENGTH, Y_LENGTH;
     private double[] normal;
     private double[] X_AXIS, Y_AXIS, upper_left;
     private double[] center = new double[3];
-    private double[] myColor = new double[]{0, 255.0, 0};
+    private double[] myColor = new double[]{0, 0, 255.0};
     private double REFLECTIVITY = 0.5;
 
     public Pane(double[] normal, double[] X_AXIS, double[] Y_AXIS, double[] upper_left, double X_LENGTH, double Y_LENGTH) {
@@ -74,14 +74,18 @@ public class Pane implements Surface {
         A[2][1] = -direction[1];
         b[1] = direction[2] * source[1] - direction[1] * source[2];
 
-        double[] intersection = VectorMath.matrixProduct(VectorMath.invert(A), b);
+        double[] intersection = VectorMath.matrixProduct(VectorMath.invert3(A), b);
 
         double[] disp = VectorMath.subtract(intersection, upper_left);
 
         double dotProd1 = VectorMath.dot(disp, X_AXIS);
         double dotProd2 = VectorMath.dot(disp, Y_AXIS);
         if (dotProd1 > 0 && dotProd2 > 0 && dotProd1 < X_LENGTH && dotProd2 < Y_LENGTH) {
-            return VectorMath.norm(VectorMath.subtract(intersection, source));
+           double res = VectorMath.dot(VectorMath.subtract(intersection,source),direction);
+           if(res > Sphere.MIN_DISTANCE) {
+               //System.out.println(res);
+               return res;
+           }
         }
 
         return null;
