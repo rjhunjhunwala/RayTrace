@@ -9,9 +9,8 @@ public interface Surface {
      * @return
      */
     public Double getIntersection(double[] source,double[] direction);
-    default double[] getColor(){
-        return new double[]{255.0,255.0,255.0};
-    }
+    default double[] getColor(){ return new double[]{255.0,255.0,255.0}; }
+    default double[] getColorAtPoint(double[] point){return getColor();}
     default double getREFLECTIVITY(){return 0.5;}
     default double getNOISE(){return 0;}
     public double[] getNormalVector(double[] surface, double[] direction);
@@ -19,7 +18,7 @@ public interface Surface {
         double[] normal_vector = VectorMath.normalize(getNormalVector(surface, direction));
         double[] to_light = VectorMath.normalize(VectorMath.subtract(Render.LIGHT_SOURCE,surface));
         double intensity = Render.AMBIENT_LIGHT + (1-Render.AMBIENT_LIGHT) * Math.max(0,VectorMath.dot(to_light,normal_vector));
-        double[] direct = VectorMath.scale(getColor(),intensity);
+        double[] direct = VectorMath.scale(getColorAtPoint(surface),intensity);
         if(depth==1){
             return direct;
         }else{

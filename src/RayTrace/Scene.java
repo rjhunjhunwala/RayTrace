@@ -106,4 +106,14 @@ public static void getTestA(ArrayList<Surface> SURFACES){
         //SURFACES.add(next);
         SURFACES.add(new ReflectiveSphere(0,-1,8, 1.3));
     }
+
+    public static void getTextureTest(ArrayList<Surface> SURFACES){
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,10},11,11));
+        SURFACES.add(new ImagePane(VectorMath.ELEM_I, VectorMath.ELEM_K,VectorMath.ELEM_J, new double[]{-5,-5,0},11,11,Textures.BRICKS));
+        SURFACES.add(new ImagePane(VectorMath.ELEM_I, VectorMath.ELEM_K,VectorMath.scale(VectorMath.ELEM_J,-1), new double[]{5,5,0},11,11,Textures.DENERO));
+        SURFACES.add(new ImagePane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,-5,0},11,11,Textures.CARPET));
+        SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,5,0},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,0},11,11));
+        SURFACES.add(new ReflectiveSphere(0,-1,8, 1.3));
+    }
 }

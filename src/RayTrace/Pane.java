@@ -4,13 +4,10 @@ import java.awt.*;
 import java.util.Vector;
 
 public class Pane implements Surface {
-    /**
-     * Long story short, this is the best way to handle division by zero...
-     */
 
-    public double X_LENGTH, Y_LENGTH;
+    public final double X_LENGTH, Y_LENGTH;
     private double[] normal;
-    private double[] X_AXIS, Y_AXIS, upper_left;
+    public double[] X_AXIS, Y_AXIS, upper_left;
     private double[] myColor = new double[]{0, 0, 255.0};
     private double REFLECTIVITY = 0.2;
 
