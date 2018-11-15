@@ -7,7 +7,7 @@ public class Sphere implements Surface {
     public static final double MIN_DISTANCE = 0.01;
     private final double radius;
     private double[] myColor = new double[]{0, 255.0,0};
-    private double REFLECTIVITY = 0.5;
+    private double REFLECTIVITY = 0.2;
 
     public double getREFLECTIVITY() {
         return REFLECTIVITY;

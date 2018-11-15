@@ -90,6 +90,7 @@ public class VectorMath {
         }
         return A;
     }
+
     /**
      * Return a "vectorized" weighted average between a and b giving a ratio weight, and b 1 - ratio
      *

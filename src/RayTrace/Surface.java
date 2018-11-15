@@ -1,6 +1,7 @@
 package RayTrace;
 
 
+import java.awt.*;
 
 public interface Surface {
     /**
@@ -27,9 +28,10 @@ public interface Surface {
                     VectorMath.scale(normal_vector, 2*cos)),VectorMath.getNoiseVector(getNOISE())));
             double[] reflected = Render.trace_ray(surface, bounce, depth -1 );
 
-                return VectorMath.mix(direct, reflected, (1 - getREFLECTIVITY()) + getREFLECTIVITY() * Math.pow(intensity, 30));
+                return VectorMath.mix(direct, reflected, (1 - getREFLECTIVITY()) + (getREFLECTIVITY()==Render.PERFECT_REFLECTION?0:(getREFLECTIVITY() * Math.pow(intensity, 30))));
 
             }
 
     }
+    void setColor(Color c);
 }

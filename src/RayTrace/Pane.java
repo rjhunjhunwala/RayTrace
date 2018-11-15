@@ -1,19 +1,18 @@
 package RayTrace;
 
 import java.awt.*;
+import java.util.Vector;
 
 public class Pane implements Surface {
     /**
      * Long story short, this is the best way to handle division by zero...
      */
 
-    private final double radius = 3;
     public double X_LENGTH, Y_LENGTH;
     private double[] normal;
     private double[] X_AXIS, Y_AXIS, upper_left;
-    private double[] center = new double[3];
     private double[] myColor = new double[]{0, 0, 255.0};
-    private double REFLECTIVITY = 0.5;
+    private double REFLECTIVITY = 0.2;
 
     public Pane(double[] normal, double[] X_AXIS, double[] Y_AXIS, double[] upper_left, double X_LENGTH, double Y_LENGTH) {
         this.normal = normal;
@@ -35,7 +34,7 @@ public class Pane implements Surface {
     public double[] getNormalVector(double[] surface, double[] direction) {
 
         if (VectorMath.dot(normal, direction) < 0) {
-            return normal;
+            return VectorMath.scale(normal, 1);
         } else {
             return VectorMath.scale(normal, -1);
         }
