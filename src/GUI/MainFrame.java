@@ -3,7 +3,7 @@ import javax.swing.*;
 
 
 public class MainFrame extends JFrame {
-    public static final int SIZE = 1024;
+    public static final int SIZE = 768;
     public MainFrame() {
         super("Here is your rendering!");
         this.add(new MainPanel());
