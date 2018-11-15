@@ -7,6 +7,11 @@ Also, like any normal room, there's a polished sphere hovering near the mirror..
 
 ![alt tag](https://raw.githubusercontent.com/rjhunjhunwala/RayTrace/master/HallOfMirrors.png) 
 
+If you want a room consisting of only mirrors, well, I can do that too... There's only a single sphere inside...
+
+![alt tag](https://raw.githubusercontent.com/rjhunjhunwala/RayTrace/master/Cosmos.jpg) 
+
+
 ## Some Other Assorted Output
 
 ![alt tag](https://raw.githubusercontent.com/rjhunjhunwala/RayTrace/master/FirstRendering.png) 

@@ -3,23 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="48d0ac40-cc5e-4246-b525-223e7958c5b3" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../Exceptional/Exceptional.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RayTrace/ImagePane.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RayTrace/Textures.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../BackEndHack" beforeDir="false" afterPath="$PROJECT_DIR$/../BackEndHack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CalHacks" beforeDir="false" afterPath="$PROJECT_DIR$/../CalHacks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JSONNaturalDisasters" beforeDir="false" afterPath="$PROJECT_DIR$/../JSONNaturalDisasters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MobileHack" beforeDir="false" afterPath="$PROJECT_DIR$/../MobileHack" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Pane.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Pane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Render.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Render.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Scene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Scene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Surface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RayTrace/RayTrace/Surface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RayTrace/Pane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Pane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RayTrace/Render.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Render.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RayTrace/Scene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Scene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RayTrace/Surface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/Surface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RayTrace/VectorMath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RayTrace/VectorMath.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../test" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -43,14 +35,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="17818" />
-          <entry key="md" value="801" />
+          <entry key="java" value="18142" />
+          <entry key="md" value="934" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17818" />
-          <entry key="Markdown" value="801" />
+          <entry key="JAVA" value="18142" />
+          <entry key="Markdown" value="934" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -58,10 +50,10 @@
         <counts>
           <entry key="html" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="124" />
+          <entry key="java" value="127" />
           <entry key="jpeg" value="3" />
           <entry key="jpg" value="2" />
-          <entry key="md" value="6" />
+          <entry key="md" value="7" />
           <entry key="png" value="15" />
           <entry key="xml" value="3" />
         </counts>
@@ -71,8 +63,8 @@
           <entry key="HTML" value="1" />
           <entry key="IDEA_MODULE" value="2" />
           <entry key="Image" value="20" />
-          <entry key="JAVA" value="124" />
-          <entry key="Markdown" value="6" />
+          <entry key="JAVA" value="127" />
+          <entry key="Markdown" value="7" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -80,14 +72,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RayTrace/Render.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="-671">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RayTrace/VectorMath.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-101">
+              <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -102,33 +103,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DeNeroTest.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Ceiling.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Carpet.jpeg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bricks.jpg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/RayTrace/Scene.java">
+        <entry file="file://$PROJECT_DIR$/src/RayTrace/ReflectivePane.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -141,6 +119,35 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bricks.jpg">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RayTrace/Scene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="413">
+              <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -207,7 +214,6 @@
         <option value="$PROJECT_DIR$/src/RayTrace/ReflectiveSphere.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Camera.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/ReflectivePane.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/RayTrace/VectorMath.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Surface.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Pane.java" />
@@ -216,6 +222,7 @@
         <option value="$PROJECT_DIR$/src/RayTrace/Textures.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Scene.java" />
         <option value="$PROJECT_DIR$/src/RayTrace/Render.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -278,7 +285,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542316529842" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542317100201" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -321,18 +328,17 @@
       <updated>1542067373909</updated>
       <workItem from="1542067380574" duration="630000" />
       <workItem from="1542071080063" duration="23645000" />
-      <workItem from="1542152143851" duration="18972000" />
+      <workItem from="1542152143851" duration="19688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43247000" />
+    <option name="totallyTimeSpent" value="43963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25679544" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -341,14 +347,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49570817" weight="0.32871014" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.47281832" visible="true" weight="0.37831324" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.472103" weight="0.37831324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49427754" weight="0.28313252" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5271817" side_tool="true" visible="true" weight="0.37831324" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49284694" visible="true" weight="0.28313252" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5071531" side_tool="true" visible="true" weight="0.28313252" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.47782546" weight="0.37710842" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -407,16 +413,6 @@
     <entry file="file://$PROJECT_DIR$/HallOfMirrors.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="144" selection-start-line="5" selection-start-column="144" selection-end-line="5" selection-end-column="144" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/RayTrace/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -434,13 +430,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTrace/ReflectivePane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -483,23 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTrace/VectorMath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTrace/Textures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DeNeroTest.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -511,16 +483,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bricks.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTrace/Scene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="116" column="48" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RayTrace/ReflectiveSphere.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -542,6 +504,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTrace/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="126" column="75" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTrace/Render.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-671">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/RayTrace/Surface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -549,13 +531,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/RayTrace/Render.java">
+    <entry file="file://$PROJECT_DIR$/src/RayTrace/ReflectivePane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTrace/Textures.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RayTrace/VectorMath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-101">
+          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="85" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

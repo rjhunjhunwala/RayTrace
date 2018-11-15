@@ -85,14 +85,14 @@ public static void getTestA(ArrayList<Surface> SURFACES){
         surfaces.get(index).setColor(c);
     }
     public static void getPlaneTest(ArrayList<Surface> SURFACES){
-    SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,10},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,10},11,11));
         SURFACES.add(new Pane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{-5,-5,0},11,11));
         SURFACES.add(new Pane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{5,-5,0},11,11));
         SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,-5,0},11,11));
         SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,5,0},11,11));
         SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,0},11,11));
         setColor(SURFACES,1,Color.red);
-                setColor(SURFACES,2,Color.red);
+        setColor(SURFACES,2,Color.red);
         setColor(SURFACES,3,Color.blue);
         setColor(SURFACES,4,Color.blue);
         Sphere next = new Sphere(1,1, 7, .5);
@@ -115,5 +115,20 @@ public static void getTestA(ArrayList<Surface> SURFACES){
         SURFACES.add(new Pane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,5,0},11,11));
         SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,0},11,11));
         SURFACES.add(new ReflectiveSphere(0,-1,8, 1.3));
+    }
+
+    public static void getBetterStanfordTree(ArrayList<Surface> SURFACES){
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,10},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{-5,-5,0},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_I, VectorMath.ELEM_J,VectorMath.ELEM_K, new double[]{5,-5,0},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,-5,0},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_J, VectorMath.ELEM_I,VectorMath.ELEM_K, new double[]{-5,5,0},11,11));
+        SURFACES.add(new ReflectivePane(VectorMath.ELEM_K, VectorMath.ELEM_I,VectorMath.ELEM_J, new double[]{-5,-5,0},11,11));
+        SURFACES.add(getColoredSphere(new Sphere(0,-1,8,1.3),Color.yellow));
+    }
+
+    public static Sphere getColoredSphere(Sphere s, Color c){
+        s.setColor(c);
+        return s;
     }
 }

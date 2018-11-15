@@ -6,11 +6,11 @@ import java.util.Arrays;
 
 public class Render{
     public static final double MAGIC_SATURATION_THRESHOLD = .90;
-    public static final int MAX_BOUNCES = 12;
+    public static final int MAX_BOUNCES = 20;
     public static final double[] VOID_COLOR = new double[]{0,0,0};
     public static final double[] SKY_COLOR = new double[]{0,150,255};
     public static final ArrayList<Surface> SURFACES = new ArrayList<>();
-    public static final int SCENE = 3;
+    public static final int SCENE = 5;
     /**
      * Some small Double value
      */
@@ -33,6 +33,9 @@ public class Render{
                 break;
             case 4:
                 Scene.getTextureTest(SURFACES);
+                break;
+            case 5:
+                Scene.getBetterStanfordTree(SURFACES);
                 break;
             default:
                 System.err.println("No Scene found!");
