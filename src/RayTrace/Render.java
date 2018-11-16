@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Render{
     public static final double MAGIC_SATURATION_THRESHOLD = .90;
-    public static final int MAX_BOUNCES = 20;
+    public static final int MAX_BOUNCES = 6;
     public static final double[] VOID_COLOR = new double[]{0,0,0};
     public static final double[] SKY_COLOR = new double[]{0,150,255};
     public static final ArrayList<Surface> SURFACES = new ArrayList<>();
