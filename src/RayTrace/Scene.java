@@ -10,6 +10,11 @@ public final class Scene {
     private Scene(){
 
     }
+
+    public static void getAlphaShapeR(ArrayList<Surface> SURFACES){
+        return;
+    }
+
     public static void getSpheresInReflectiveSphere(ArrayList<Surface> SURFACES){
         SURFACES.add(new ReflectiveSphere(0,0,0,15));
         Sphere next = new Sphere(0,2,5, 1);
